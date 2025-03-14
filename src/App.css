@@ -1,0 +1,465 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Font Families */
+.aboreto-regular {
+  font-family: "Aboreto", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.baskervville-sc-regular {
+  font-family: "Baskervville SC", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+  font-family: "Baskervville SC", serif;
+  font-size: 25px;
+}
+****************************************themes*******************************
+ /* Theme Styles */
+
+ .bg-primary-text {
+  background-color: white;
+  color: black;
+}
+
+.bg-secondary-text {
+  background-color: black;
+  color: whitesmoke;
+}
+
+***************************************theme switch*************************************************
+/*Theme Switcher Container*/
+.theme-switcher {
+  display: inline-block;
+  position: relative;
+  width: 50px;
+  height: 25px;
+}
+
+/*Hide the checkbox but keep it functional*/
+.theme-switcher input [type="checkbox"] {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* Slider Styling */
+.slider {
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+  width: 50px;
+  height: 25px;
+  background-color: cyan;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  content: " ";
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  left: 4px;
+  bottom: 3px;
+  background-color: black;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: green;
+}
+
+input:checked + .slider:before {
+  transform: translateX(24px);
+}
+
+input[type="checkbox"] {
+  visibility: hidden;
+}
+
+input[type="checkbox"]:checked + .slider {
+  background-color: #cbc6d3;
+}
+
+slider.round {
+  border-radius: 34px;
+}
+
+****************************************
+  General-body
+  ******************************
+  .homies {
+  font-size: 35px;
+  font-weight: 700;
+  text-align: left;
+  margin-top: 50px;
+}
+
+.homies span {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  text-shadow: 1px 1px 2px whitesmoke;
+}
+
+
+********************************text-Animation**************************************
+  .text-Animation {
+  font-size: 30px;
+  font-weight: 700;
+  min-width: 280px;
+}
+
+.text-Animation span {
+  position: relative;
+  display: inline-flex;
+}
+
+.text-Animation span::before {
+  content: "Developer";
+  font-size: xx-large;
+  color: var(--bg-secondary-text);
+  animation: letters 20s infinite;
+}
+
+.text-Animation span::after {
+  content: " ";
+  background-color: var(--bg-primary-text);
+  position: absolute;
+  width: calc(100% + 8px);
+  height: 100%;
+  border-left: 3px solid var(--bg-primary-text);
+  right: -7px;
+  animation: cursor 0.6s infinite, typing 20s steps(14) infinite;
+}
+
+@keyframes cursor {
+  to {
+    border-left: 3px solid var(--bg-secondary-text);
+  }
+}
+
+@keyframes letters {
+  0%,
+  20% {
+    content: "DevOpster";
+  }
+  21%,
+  40% {
+    content: "Web Developer";
+  }
+  41%,
+  60% {
+    content: "Programmer";
+  }
+  61%,
+  80% {
+    content: "Tech Enthusiast";
+  }
+  81%,
+  100% {
+    content: "Quick Learner";
+  }
+}
+
+@keyframes typing {
+  10%,
+  15%,
+  30%,
+  35%,
+  50%,
+  55%,
+  70%,
+  75%,
+  90%,
+  95% {
+    width: 0;
+  }
+  5%,
+  20%,
+  25%,
+  40%,
+  45%,
+  60%,
+  65%,
+  80%,
+  85% {
+    width: calc(100% + 8px);
+  }
+}
+
+*****************************************************hire-button***************************************************************
+  .hire-btn {
+  display: inline-block;
+  padding: 1rem 2.8rem;
+  border-radius: 5rem;
+  font-size: 23px;
+  color: whitesmoke;
+  border: 2px solid transparent;
+  letter-spacing: 0.2px;
+  font-weight: 200;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+  background-color: darkblue;
+}
+
+.hire-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px black, 0 0 5px whitesmoke;
+  background-color: aqua;
+  color: cadetblue;
+}
+
+@media (min-width: 768px) {
+  .flex.justify-end a {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .flex.justify-end a {
+    font-size: 30px;
+  }
+}
+
+.sub {
+  color: var(--bg-primary-text);
+}
+
+.con {
+  font-size: 25px;
+  justify-content: space-between;
+  word-spacing: 2px;
+}
+
+.con ul li:hover {
+  color: cornflowerblue;
+  text-decoration-line: none;
+  text-decoration-color: cornsilk;
+  text-decoration-style: double;
+}
+
+/* About Me Section */
+.about-me {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Title Styling */
+.about-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Content Box */
+.about-content {
+  display: flex;
+  flex-direction: column;
+  width: 90%; 
+  max-width: 1800px;
+  padding: 20px;
+  border: 3px solid red;
+  border-radius: 50px;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Hover Effects */
+.about-content:hover {
+  border-radius: 30px;
+  box-shadow: 0 0 15px red; 
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  transform: translateY(-5px);
+}
+
+.resume-container {
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+}
+
+.resume {
+  display: flex;
+  align-items: center; 
+  justify-content: center; 
+  width: 200px;
+  padding: 20px;
+  border: 3px solid red;
+  border-radius: 50px;
+  text-align: center;
+}
+.resume:hover {
+  border-radius: 30px;
+  box-shadow: 0 0 15px red; 
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  transform: translateY(-5px);
+}
+
+
+/* Responsive Adjustments */
+@media (min-width: 768px) {
+  .about-title {
+    font-size: 3rem;
+  }
+  .about-content {
+    width: 75%;
+    padding: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-content {
+    width: 90%;
+    padding: 20px;
+  }
+}
+
+
+.image-slider {
+  height: 450px;
+  width: 250px;
+  background-color: black;
+}
+
+.cv-btn {
+  border: 2px solid red;
+  font-size: 30px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  width: 150px;
+  padding: 5px 15px 5px 15px;
+  border-radius: 50px;
+  align-content: center;
+}
+
+.cv-btn:hover {
+  border-radius: 20px;
+  box-shadow: 0 0 15px red; 
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  transform: translateY(-5px);
+}
+
+/*****************************************************************************/
+.project-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.project-card:hover {
+  border-radius: 8px;
+  box-shadow: 0 0 15px red; 
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  transform: translateY(-5px);
+}
+
+.project-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: var(--title-color, #333);
+}
+
+.project-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 10px;
+}
+
+.project-card {
+  border: 2px solid var(--card-border, #ff0000);
+  border-radius: 8px;
+  padding: 20px;
+  width: 300px;
+  height: 150px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.4;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .project-card {
+    width: 90%;
+    height: auto;
+  }
+
+  .project-title {
+    font-size: 2rem;
+  }
+}
+
+/**********************************************************************************************/
+/* Flip Card Container */
+.flip-card {
+  perspective: 1000px;
+  width: 100%;
+  height: 500px; /* Increased height */
+}
+
+/* Flip Inner */
+.flip-card-inner {
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+}
+
+/* Flip Effect on Hover (for PC) */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+  box-shadow: 0 0 15px red; 
+}
+
+/* Flip Effect for Mobile (Touch Support) */
+@media (max-width: 640px) {
+  .flip-card:active .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+}
+
+/* Front & Back Side */
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  display: flex;
+  border-radius: 8px;
+  border: 2px solid var(--card-border, #ff0000);
+  
+  
+}
+
+/* Back Side */
+.flip-card-back {
+  transform: rotateY(180deg);
+}
+
+/* Responsive Height Adjustments */
+@media (max-width: 768px) {
+  .flip-card {
+    height: 350px; /* Slightly more height for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .flip-card {
+    height: 370px; /* More height for mobile */
+  }
+}
