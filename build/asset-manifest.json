@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/github.io/portfolio/static/css/main.ae151bed.css",
-    "main.js": "/github.io/portfolio/static/js/main.13720751.js",
-    "index.html": "/github.io/portfolio/index.html",
-    "main.ae151bed.css.map": "/github.io/portfolio/static/css/main.ae151bed.css.map",
-    "main.13720751.js.map": "/github.io/portfolio/static/js/main.13720751.js.map"
+    "main.css": "/YUVARAJ-2K3/portfolioPanda.git/static/css/main.ae151bed.css",
+    "main.js": "/YUVARAJ-2K3/portfolioPanda.git/static/js/main.7fb99d81.js",
+    "index.html": "/YUVARAJ-2K3/portfolioPanda.git/index.html",
+    "main.ae151bed.css.map": "/YUVARAJ-2K3/portfolioPanda.git/static/css/main.ae151bed.css.map",
+    "main.7fb99d81.js.map": "/YUVARAJ-2K3/portfolioPanda.git/static/js/main.7fb99d81.js.map"
   },
   "entrypoints": [
     "static/css/main.ae151bed.css",
-    "static/js/main.13720751.js"
+    "static/js/main.7fb99d81.js"
   ]
 }
