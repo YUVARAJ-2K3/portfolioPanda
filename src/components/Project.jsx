@@ -2,7 +2,7 @@ import React from "react";
 import { useTheme } from "./ThemeContext";
 
 export default function Project() {
-  const { theme, toggleTheme } = useTheme();
+  const { theme } = useTheme();
 
   return (
     <section id="project" className={`flex px-5 py-6 ${theme}`}>

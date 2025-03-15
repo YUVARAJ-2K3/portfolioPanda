@@ -21,7 +21,7 @@ export default function Home() {
     }, 3000); // Change every 2 seconds
 
     return () => clearInterval(interval);
-  }, []);
+  }, [titles.length]);
 
   return (
     <section id="Home" className={`${theme}`}>

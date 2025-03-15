@@ -3,7 +3,6 @@ import { SiLinkedin } from "react-icons/si";
 import { FaGithubSquare } from "react-icons/fa";
 import { ImMail } from "react-icons/im";
 import { FaInstagramSquare } from "react-icons/fa";
-import { useState, useEffect } from "react";
 <div className="pro-logo">
           <div className="hidden md:block">
             <div className="flex justify-end">

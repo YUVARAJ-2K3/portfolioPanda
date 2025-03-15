@@ -2,7 +2,7 @@ import React from "react";
 import { useTheme } from "./ThemeContext";
 
 export default function About() {
-  const { theme, toggleTheme } = useTheme();
+  const { theme } = useTheme();
 
   return (
     <section id="aboutme" className={`about-me ${theme} py-10`}>
@@ -31,7 +31,7 @@ export default function About() {
 
         {/* Resume Button */}
         <div class="resume-container">
-  <a href="" className="resume mt-16" >Resume</a>
+  <a href="www.google.co.in" className="resume mt-16" >Resume</a>
 </div>
 
       </div>
