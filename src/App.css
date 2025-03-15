@@ -92,157 +92,10 @@ slider.round {
   border-radius: 34px;
 }
 
-****************************************
-  General-body
-  ******************************
-  .homies {
-  font-size: 35px;
-  font-weight: 700;
-  text-align: left;
-  margin-top: 50px;
-}
 
-.homies span {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  text-shadow: 1px 1px 2px whitesmoke;
-}
-
-
-********************************text-Animation**************************************
-  .text-Animation {
-  font-size: 30px;
-  font-weight: 700;
-  min-width: 280px;
-}
-
-.text-Animation span {
-  position: relative;
-  display: inline-flex;
-}
-
-.text-Animation span::before {
-  content: "Developer";
-  font-size: xx-large;
-  color: var(--bg-secondary-text);
-  animation: letters 20s infinite;
-}
-
-.text-Animation span::after {
-  content: " ";
-  background-color: var(--bg-primary-text);
-  position: absolute;
-  width: calc(100% + 8px);
-  height: 100%;
-  border-left: 3px solid var(--bg-primary-text);
-  right: -7px;
-  animation: cursor 0.6s infinite, typing 20s steps(14) infinite;
-}
-
-@keyframes cursor {
-  to {
-    border-left: 3px solid var(--bg-secondary-text);
-  }
-}
-
-@keyframes letters {
-  0%,
-  20% {
-    content: "DevOpster";
-  }
-  21%,
-  40% {
-    content: "Web Developer";
-  }
-  41%,
-  60% {
-    content: "Programmer";
-  }
-  61%,
-  80% {
-    content: "Tech Enthusiast";
-  }
-  81%,
-  100% {
-    content: "Quick Learner";
-  }
-}
-
-@keyframes typing {
-  10%,
-  15%,
-  30%,
-  35%,
-  50%,
-  55%,
-  70%,
-  75%,
-  90%,
-  95% {
-    width: 0;
-  }
-  5%,
-  20%,
-  25%,
-  40%,
-  45%,
-  60%,
-  65%,
-  80%,
-  85% {
-    width: calc(100% + 8px);
-  }
-}
 
 *****************************************************hire-button***************************************************************
-  .hire-btn {
-  display: inline-block;
-  padding: 1rem 2.8rem;
-  border-radius: 5rem;
-  font-size: 23px;
-  color: whitesmoke;
-  border: 2px solid transparent;
-  letter-spacing: 0.2px;
-  font-weight: 200;
-  transition: 0.3s ease-in-out;
-  cursor: pointer;
-  background-color: darkblue;
-}
-
-.hire-btn:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 25px black, 0 0 5px whitesmoke;
-  background-color: aqua;
-  color: cadetblue;
-}
-
-@media (min-width: 768px) {
-  .flex.justify-end a {
-    font-size: 40px;
-  }
-}
-
-@media (max-width: 768px) {
-  .flex.justify-end a {
-    font-size: 30px;
-  }
-}
-
-.sub {
-  color: var(--bg-primary-text);
-}
-
-.con {
-  font-size: 25px;
-  justify-content: space-between;
-  word-spacing: 2px;
-}
-
-.con ul li:hover {
-  color: cornflowerblue;
-  text-decoration-line: none;
-  text-decoration-color: cornsilk;
-  text-decoration-style: double;
-}
+ 
 
 /* About Me Section */
 .about-me {
@@ -379,8 +232,8 @@ slider.round {
   border: 2px solid var(--card-border, #ff0000);
   border-radius: 8px;
   padding: 20px;
-  width: 300px;
-  height: 150px;
+  width: 380px;
+  height: 300px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   font-size: 1rem;
   font-weight: 600;

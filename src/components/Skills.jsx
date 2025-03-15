@@ -16,7 +16,7 @@ export default function Skills() {
   return (
     <section id="skills" className={`skills-section ${theme} py-8`}>
       <div className="max-w-6xl mx-auto text-center">
-        <h1 className="text-4xl sm:text-5xl font-bold pt-8 pb-8 mb-8">
+        <h1 className="text-4xl sm:text-5xl font-bold pt-24 pb-8 mb-8">
           Skills
         </h1>
 

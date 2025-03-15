@@ -7,7 +7,7 @@ export default function Project() {
   return (
     <section id="project" className={`flex px-5 py-6 ${theme}`}>
       <div className="project-container">
-        <div className="about-title pt-8 pb-8">
+        <div className="about-title pt-16 pb-8">
           <h1>Project</h1>
         </div>
         <br />

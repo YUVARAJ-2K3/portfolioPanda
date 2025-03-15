@@ -8,7 +8,7 @@ export default function About() {
     <section id="aboutme" className={`about-me ${theme} py-10`}>
       <div className="max-w-6xl mx-auto px-4 text-center">
         {/* Title */}
-        <h1 className="text-4xl pt-10 md:text-5xl font-bold">
+        <h1 className="text-4xl pt-10 md:text-5xl pt-32 font-bold">
           About <span>Me</span>
         </h1>
 
