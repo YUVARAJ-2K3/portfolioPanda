@@ -43,7 +43,7 @@ export default function Home() {
             className="w-full h-full object-cover rounded-md opacity-80 transition-opacity duration-1000 ease-in-out"
           />
           <p className="absolute text-lg sm:text-4xl font-bold italic bg-black bg-opacity-75 px-6 py-2 sm:py-3 text-white rounded-lg shadow-md">
-            I am <span className="text-red-400">{titles[currentIndex]}</span>
+            I am a <span className="text-red-400">{titles[currentIndex]}</span>
           </p>
         </div>
 
