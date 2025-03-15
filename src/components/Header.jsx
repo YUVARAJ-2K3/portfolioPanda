@@ -17,10 +17,10 @@ export default function Header() {
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex flex-grow justify-center">
-          <ul className="flex space-x-16 text-xl font-semibold">
+          <ul className="flex space-x-16 text-3xl font-semibold">
             {["About Me", "Project", "Skills", "Certfications","Internships", "Contacts"].map((item, index) => (
               <li key={index}>
-                <a href={`#${item.toLowerCase().replace(" ", "")}`} className="hover:opacity-75 transition duration-300">
+                <a href={`#${item.toLowerCase().replace(" ", "")}`} className="hover:text-cyan-400">
                   {item}
                 </a>
               </li>

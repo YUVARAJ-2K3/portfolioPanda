@@ -3,7 +3,7 @@ import { createContext, useContext, useState } from "react";
 const ThemeContext = createContext();
 
 export const ThemeProvider = ({ children }) => {
-  const [theme, setTheme] = useState("bg-primary-text");
+  const [theme, setTheme] = useState("bg-secondary-text");
 
   const toggleTheme = () => {
     setTheme((prevTheme) =>
