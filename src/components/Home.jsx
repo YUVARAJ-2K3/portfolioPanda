@@ -22,7 +22,7 @@ export default function Home() {
   }, [titles.length]);
 
   return (
-    <section id="Home" className={`${theme} py-12 sm:py-16`}>
+    <section id="home" className={`${theme} py-12 sm:py-16`}>
       <div className="h-[90vh] flex flex-col sm:flex-row justify-center items-center px-6 sm:px-16 space-y-10 sm:space-y-0 sm:space-x-10">
         
         {/* Left Side - Welcome Text */}

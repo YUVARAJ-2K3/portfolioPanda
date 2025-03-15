@@ -7,7 +7,7 @@ export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className={`fixed top-0 left-0 w-full shadow-lg bg-white z-50 px-6 py-5 ${theme}`}>
+    <header className={`fixed top-0 left-0 w-full  px-6 py-5 border-b-2 border-red-500 ${theme}`}>
       <div className="flex justify-between items-center max-w-7xl mx-auto">
         
         {/* Menu Button (Mobile) */}
@@ -18,7 +18,7 @@ export default function Header() {
         {/* Desktop Navigation */}
         <nav className="hidden md:flex flex-grow justify-center">
           <ul className="flex space-x-16 text-3xl font-semibold">
-            {["About Me", "Project", "Skills", "Certfications","Internships", "Contacts"].map((item, index) => (
+            {["Home","About Me", "Project", "Skills", "Certifications", "Internships", "Contacts"].map((item, index) => (
               <li key={index}>
                 <a href={`#${item.toLowerCase().replace(" ", "")}`} className="hover:text-cyan-400">
                   {item}
@@ -37,10 +37,10 @@ export default function Header() {
 
       {/* Mobile Navigation Menu */}
       {menuOpen && (
-        <div className="md:hidden absolute top-20 left-0 w-full bg-white shadow-md">
+        <div className="md:hidden absolute top-20 left-0 w-full shadow-md  border-b-2 border-red-500">
           <nav>
             <ul className="flex flex-col space-y-5 py-6 text-center text-xl">
-              {["About Me", "Project", "Skills", "Apprenticeship", "Contacts"].map((item, index) => (
+              {["Home","About Me", "Project", "Skills", "Certifications", "Internships", "Contacts"].map((item, index) => (
                 <li key={index}>
                   <a href={`#${item.toLowerCase().replace(" ", "")}`} onClick={() => setMenuOpen(false)} className="block py-2 hover:opacity-75 transition">
                     {item}
