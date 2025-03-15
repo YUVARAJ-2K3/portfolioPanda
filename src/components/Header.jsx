@@ -7,7 +7,7 @@ export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className={`fixed top-0 left-0 w-full  px-6 py-5 border-b-2 border-red-500 ${theme}`}>
+    <header className={`fixed top-0 left-0 w-full z-40 bg-white px-6 py-5 border-b-2 border-red-500 ${theme}`}>
       <div className="flex justify-between items-center max-w-7xl mx-auto">
         
         {/* Menu Button (Mobile) */}
