@@ -50,7 +50,7 @@ export default function Certificates() {
         Certifications
       </h1>
 
-      <div className="flex flex-col sm:flex-row justify-center items-center h-auto p-6 space-y-6 sm:space-y-0 sm:space-x-10">
+      <div className="flex flex-col sm:flex-row justify-center items-center  h-auto p-6 space-y-6 sm:space-y-0 sm:space-x-10">
         
         {/* Left Section - Certificate Cards */}
         <div className="flex flex-col space-y-6 w-full sm:w-64">
@@ -70,14 +70,16 @@ export default function Certificates() {
         </div>
 
         {/* Right Section - Always Show Selected Certificate */}
-        <div className="sm:ml-16 mt-8 sm:mt-0 p-10 border-2 border-[rgb(255,0,0)] rounded-lg shadow-lg flex flex-col items-center justify-center w-full sm:w-[600px]">
+        {/* Right Section - Always Show Selected Certificate */}
+<div className="sm:ml-16 mt-8 sm:mt-0 p-10 pt-16 border-2 border-[rgb(255,0,0)] rounded-lg shadow-lg flex flex-col items-center justify-center sm:h-[650px] sm:w-[700px]">
+
           {selectedCertificate && (
             <>
               {/* Click to Open Fullscreen */}
               <motion.img
                 src={selectedCertificate.image}
                 alt={selectedCertificate.title}
-                className="w-full max-w-[500px] h-auto rounded-md mb-4 border-2 cerfull border-[rgb(255,0,0)] cursor-pointer"
+                className="w-80% h-70% rounded-md mb-4 border-2 cerfull border-[rgb(255,0,0)] cursor-pointer"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.5 }}
@@ -86,7 +88,6 @@ export default function Certificates() {
               <h2 className="text-2xl font-bold text-center">{selectedCertificate.title}</h2>
               <p className="text-lg">{selectedCertificate.issuer}</p>
               <p className="text-md">{selectedCertificate.date}</p>
-              <p className="text-lg mt-4 text-center">{selectedCertificate.description}</p>
             </>
           )}
         </div>
