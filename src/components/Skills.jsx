@@ -3,7 +3,7 @@ import { useTheme } from "./ThemeContext";
 
 const skills = [
   { title: "DevOps & System Administration", details: ["Linux", "RHEL", "Ubuntu", "Jenkins","Docker", "Slack", "Ansible", "Networking"] },
-  { title: "Monitoring & Logging", details: ["Prometheus", "Grafana", "ELK Stack"] },
+  { title: "Monitoring & Logging", details: ["Prometheus", "Grafana", "Elasticsearch","Logstash","Kibana"] },
   { title: "Programming & Development", details: ["Python", "C"] },
   { title: "Cloud Computing & Infrastructure", details: ["AWS", "EC2", "S3", "AWS IAM"] },
   { title: "Web Development", details: ["HTML", "CSS", "JavaScript", "ReactJS", "Figma"] },
