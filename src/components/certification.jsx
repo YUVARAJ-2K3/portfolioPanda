@@ -1,82 +1,129 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
+import { useTheme } from "./ThemeContext";
+import RHCSA from "../images/RHCSA.png";
+import RHCE from "../images/RHCE.png";
 
 export default function Certificates() {
+  const { theme } = useTheme();
   const [selectedCertificate, setSelectedCertificate] = useState(null);
-  const [shuffledCertificates, setShuffledCertificates] = useState([]);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   // Certificate Data
   const certificates = [
     {
       id: 1,
-      title: "Red Hat Certified Engineer (RHCE)",
+      title: "Red Hat Certified System Administrator (RHCSA)",
       issuer: "Red Hat",
-      date: "March 2024",
-      image: "https://via.placeholder.com/200", // Replace with actual certificate image
-      description: "Advanced skills in Linux automation, security, and networking.",
+      date: "June 2024",
+      image: RHCSA, 
     },
     {
       id: 2,
-      title: "AWS Certified Solutions Architect",
-      issuer: "Amazon Web Services",
-      date: "February 2024",
-      image: "https://via.placeholder.com/200",
-      description: "Expertise in designing scalable and secure cloud solutions.",
-    },
-    {
-      id: 3,
-      title: "Docker & Kubernetes Certification",
-      issuer: "Udemy",
-      date: "January 2024",
-      image: "https://via.placeholder.com/200",
-      description: "Hands-on experience with container orchestration and microservices.",
+      title: "Red Hat Certified Engineer (RHCE)",
+      issuer: "Red Hat",
+      date: "October 2024",
+      image: RHCE,
     },
   ];
 
-  // Shuffle the certificates when component loads
+  // Set the first certificate as default when the page loads
   useEffect(() => {
-    setShuffledCertificates([...certificates].sort(() => Math.random() - 0.5));
+    if (certificates.length > 0) {
+      setSelectedCertificate(certificates[0]);
+    }
   }, []);
 
+  // Open fullscreen modal
+  const handleOpenModal = () => {
+    setIsModalOpen(true);
+  };
+
+  // Close modal
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+  };
+
   return (
-    <div className="flex flex-col sm:flex-row justify-center items-center h-screen bg-gray-900 text-white p-6">
-      {/* Left Section - Shuffled Certificate Cards */}
-      <div className="flex flex-col space-y-4">
-        {shuffledCertificates.map((certificate) => (
-          <motion.div
-            key={certificate.id}
-            className="p-4 bg-gray-700 rounded-lg shadow-md w-64 text-center cursor-pointer hover:bg-gray-600 transition"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            onClick={() => setSelectedCertificate(certificate)}
-          >
-            <h3 className="text-lg font-semibold">{certificate.title}</h3>
-            <p className="text-sm text-gray-300">{certificate.issuer}</p>
-          </motion.div>
-        ))}
+    <section id="certifications" className={`${theme} py-16`}>
+      <h1 className="text-4xl md:text-5xl text-center font-bold pt-14 pb-10">
+        Certifications
+      </h1>
+
+      <div className="flex flex-col sm:flex-row justify-center items-center h-auto p-6 space-y-6 sm:space-y-0 sm:space-x-10">
+        
+        {/* Left Section - Certificate Cards */}
+        <div className="flex flex-col space-y-6 w-full sm:w-64">
+          {certificates.map((certificate) => (
+            <motion.div
+              key={certificate.id}
+              className={`p-6 border-2 border-[rgb(255,0,0)] rounded-lg shadow-md text-center certi ${
+                selectedCertificate?.id === certificate.id ? "cerclick" : ""
+              }`}
+              whileTap={{ scale: 0.95 }}
+              onClick={() => setSelectedCertificate(certificate)}
+            >
+              <h3 className="text-xl font-semibold">{certificate.title}</h3>
+              <p className="text-lg">{certificate.issuer}</p>
+            </motion.div>
+          ))}
+        </div>
+
+        {/* Right Section - Always Show Selected Certificate */}
+        <div className="sm:ml-16 mt-8 sm:mt-0 p-10 border-2 border-[rgb(255,0,0)] rounded-lg shadow-lg flex flex-col items-center justify-center w-full sm:w-[600px]">
+          {selectedCertificate && (
+            <>
+              {/* Click to Open Fullscreen */}
+              <motion.img
+                src={selectedCertificate.image}
+                alt={selectedCertificate.title}
+                className="w-full max-w-[500px] h-auto rounded-md mb-4 border-2 cerfull border-[rgb(255,0,0)] cursor-pointer"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.5 }}
+                onClick={handleOpenModal} // Opens fullscreen modal
+              />
+              <h2 className="text-2xl font-bold text-center">{selectedCertificate.title}</h2>
+              <p className="text-lg">{selectedCertificate.issuer}</p>
+              <p className="text-md">{selectedCertificate.date}</p>
+              <p className="text-lg mt-4 text-center">{selectedCertificate.description}</p>
+            </>
+          )}
+        </div>
       </div>
 
-      {/* Right Section - Selected Certificate Details */}
-      <div className="ml-10 p-6 bg-gray-800 rounded-lg shadow-lg w-[350px] h-[400px] flex flex-col items-center justify-center">
-        {selectedCertificate ? (
-          <>
+      {/* Fullscreen Modal - Open on Right Image Click */}
+      {isModalOpen && selectedCertificate && (
+        <div
+          className="fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center z-50"
+          onClick={handleCloseModal} // Close modal on background click
+        >
+          <motion.div
+            className="p-8 rounded-lg shadow-lg w-[90%] sm:w-[900px] text-center border-2 border-[rgb(255,0,0)]"
+            initial={{ scale: 0.8, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            exit={{ scale: 0.8, opacity: 0 }}
+            transition={{ duration: 0.3 }}
+            onClick={(e) => e.stopPropagation()} // Prevent closing when clicking inside
+          >
+            <button className="absolute top-5 right-5 text-2xl" onClick={handleCloseModal}>
+              ✖
+            </button>
             <motion.img
               src={selectedCertificate.image}
               alt={selectedCertificate.title}
-              className="w-40 h-40 rounded-md mb-4"
+              className="w-full max-w-[800px] h-auto mx-auto rounded-md mb-4 border-2 border-[rgb(255,0,0)]"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5 }}
             />
-            <h2 className="text-xl font-bold text-blue-400">{selectedCertificate.title}</h2>
-            <p className="text-sm text-gray-300">{selectedCertificate.issuer}</p>
-            <p className="text-sm text-gray-400">{selectedCertificate.date}</p>
-            <p className="text-center text-gray-200 mt-2">{selectedCertificate.description}</p>
-          </>
-        ) : (
-          <p className="text-gray-400 text-center">Click on a certificate to see details</p>
-        )}
-      </div>
-    </div>
+            <h2 className="text-3xl font-bold">{selectedCertificate.title}</h2>
+            <p className="text-lg">{selectedCertificate.issuer}</p>
+            <p className="text-md">{selectedCertificate.date}</p>
+            <p className="text-lg mt-4">{selectedCertificate.description}</p>
+          </motion.div>
+        </div>
+      )}
+    </section>
   );
 }

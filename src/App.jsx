@@ -17,7 +17,7 @@ function App() {
       <Aboutme/>
       <Project/>
       <Skills/>
-      <Certificates></Certificates>
+      <Certificates/>
       <Internships/>
       </ThemeProvider>
     </div>

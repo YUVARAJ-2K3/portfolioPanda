@@ -30,7 +30,7 @@ export default function Home() {
           <p className="text-3xl sm:text-6xl font-semibold  leading-tight">
             Welcome to my page!
           </p>
-          <p className="text-4xl sm:text-7xl font-extrabold text-red-400 mt-4">
+          <p className="text-4xl sm:text-7xl font-extrabold text-[rgb(255,0,0)] mt-4">
             I am YUVARAJ S
           </p>
         </div>
@@ -43,7 +43,7 @@ export default function Home() {
             className="w-full h-full object-cover rounded-md opacity-80 transition-opacity duration-1000 ease-in-out"
           />
           <p className="absolute text-lg sm:text-4xl font-bold italic bg-black bg-opacity-75 px-6 py-2 sm:py-3 text-white rounded-lg shadow-md">
-            I am a <span className="text-red-400">{titles[currentIndex]}</span>
+            I am a <span className="text-[rgb(255,0,0)]">{titles[currentIndex]}</span>
           </p>
         </div>
 

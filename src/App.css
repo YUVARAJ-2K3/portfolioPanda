@@ -316,3 +316,26 @@ slider.round {
     height: 370px; /* More height for mobile */
   }
 }
+.certi:hover
+{
+  border-radius: 8px;
+  box-shadow: 0 0 15px red; 
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  transform: translateY(-5px);
+}
+
+.cerfull:hover
+{
+  border-radius: 8px;
+  box-shadow: 0 0 15px red; 
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  transform: translateY(-5px);
+}
+
+.cerclick
+{
+  border-radius: 8px;
+  box-shadow: 0 0 70px red; 
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  transform: translateY(-5px);
+}
