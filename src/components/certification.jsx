@@ -46,7 +46,7 @@ export default function Certificates() {
 
   return (
     <section id="certifications" className={`${theme} py-16`}>
-      <h1 className="text-4xl md:text-5xl text-center font-bold pt-14 pb-10">
+      <h1 className="text-4xl md:text-5xl text-center font-bold pl-60 pt-14 pb-10">
         Certifications
       </h1>
 

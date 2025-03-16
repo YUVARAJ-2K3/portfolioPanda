@@ -19,8 +19,6 @@ export default function Skills() {
         <h1 className="text-4xl sm:text-5xl font-bold pt-24 pb-8 mb-8">
           Skills
         </h1>
-
-  
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 px-4">
           {skills.map((skill, index) => (
             <div key={index} className="flip-card w-full h-64">
