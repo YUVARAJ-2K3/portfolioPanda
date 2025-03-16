@@ -60,6 +60,14 @@ export default function Project() {
           >
             PROMETHEUS AND GRAFANA FOR REAL-TIME MONITORING OF RHEL SERVERS
           </a>
+          <a
+            href="https://www.linkedin.com/posts/yuvaraj-s-542053256_monitoring-devops-prometheus-activity-7293908845448335360-ol47?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD8CzEIBE8Z8pNSWOJohRYteTW4hAVHJEE0"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="project-card flex text-justify"
+          >
+            DEPLOYED A WEBPAGE USING CI/CD PIPELINE IN AWS
+          </a>
         </div>
       </div>
     </section>
