@@ -24,9 +24,9 @@ export default function ContactForm() {
       "https://docs.google.com/forms/d/e/1FAIpQLScd4a2cMmq9M7zpK_XwiEW6bixLqsjDjQPzjoWU6P_CD1HQFg/formResponse";
     
     const formBody = new URLSearchParams();
-    formBody.append("entry.1270603981", formData.name);     // Name field ID
-    formBody.append("entry.486891414", formData.email);     // Email field ID
-    formBody.append("entry.1000697639", formData.message);  // Message field ID
+    formBody.append("entry.1270603981", formData.name); 
+    formBody.append("entry.486891414", formData.email);     
+    formBody.append("entry.1000697639", formData.message);  
   
     fetch(formUrl, {
       method: "POST",
