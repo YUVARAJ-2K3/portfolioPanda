@@ -46,9 +46,9 @@ export default function Certificates() {
 
   return (
     <section id="certifications" className={`${theme} py-16`}>
-      <h1 className="text-4xl md:text-5xl text-center font-bold pl-60 pt-14 pb-10">
-        Certifications
-      </h1>
+      <h1 className="text-4xl text-center pt-9 md:text-5xl pt-32 font-bold">
+          Certifications 
+        </h1>
 
       <div className="flex flex-col sm:flex-row justify-center items-center  h-auto p-6 space-y-6 sm:space-y-0 sm:space-x-10">
         

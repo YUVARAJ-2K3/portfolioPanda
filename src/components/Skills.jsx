@@ -16,7 +16,7 @@ export default function Skills() {
   return (
     <section id="skills" className={`skills-section ${theme} py-8`}>
       <div className="max-w-6xl mx-auto text-center">
-        <h1 className="text-4xl sm:text-5xl font-bold pt-24 pb-8 mb-8">
+      <h1 className="text-4xl pt-10 md:text-5xl pt-28 pb-5 font-bold">
           Skills
         </h1>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 px-4">

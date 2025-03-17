@@ -18,7 +18,7 @@ export default function Header() {
         {/* Desktop Navigation */}
         <nav className="hidden md:flex flex-grow justify-center">
           <ul className="flex space-x-16 text-3xl font-semibold">
-            {["Home","About Me", "Project", "Skills", "Certifications", "Internships", "Contacts"].map((item, index) => (
+            {["Home","About Me", "Project", "Skills", "Certifications", "Internships", "Contact Us"].map((item, index) => (
               <li key={index}>
                 <a href={`#${item.toLowerCase().replace(" ", "")}`} className="hover:text-cyan-400">
                   {item}

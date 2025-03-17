@@ -7,6 +7,7 @@ import Project from './components/Project';
 import Skills from './components/Skills';
 import Certificates from './components/certification';
 import Internships from "./components/internships";
+import Contact from "./components/Contacts";
 function App() {
   return (
     
@@ -19,6 +20,7 @@ function App() {
       <Skills/>
       <Certificates/>
       <Internships/>
+      <Contact/>
       </ThemeProvider>
     </div>
   );
