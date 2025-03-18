@@ -31,7 +31,7 @@ export default function About() {
 
         {/* Resume Button */}
         <div class="resume-container">
-  <a href="www.google.co.in" className="resume mt-16" >Resume</a>
+  <a href="https://drive.google.com/file/d/1u5H5f8e6cNbCXwicXit2bL1I_OkAt7Gf/view?usp=sharing" className="resume mt-16" >Resume</a>
 </div>
 
       </div>
